@@ -1,0 +1,155 @@
+/* ===== Section Wrapper ===== */
+.task-list {
+  margin-top: 30px;
+}
+
+/* ===== Stats Cards ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 30px;
+  margin-top: 6px;
+}
+
+.stat-card.total {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+}
+
+.stat-card.completed {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.stat-card.pending {
+  background: linear-gradient(135deg, #ffedd5, #fed7aa);
+}
+
+/* ===== Filters ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+.filters .active {
+  background: #4f46e5;
+  color: white;
+}
+
+/* ===== Task Cards ===== */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.task-card.done {
+  background: #f0fdf4;
+  border-left: 6px solid #22c55e;
+}
+
+.task-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+
+.task-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===== Buttons ===== */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #e0e7ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-actions button:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+/* ===== Empty State ===== */
+.empty {
+  text-align: center;
+  margin-top: 40px;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+.clear-btn {
+  background: #fee2e2 !important;
+  color: #7f1d1d !important;
+}
+
+.clear-btn:hover {
+  background: #ef4444 !important;
+  color: white !important;
+}

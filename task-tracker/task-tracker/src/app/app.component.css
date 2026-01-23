@@ -1,0 +1,56 @@
+/* ===== App Wrapper ===== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+  color: #0f172a;
+}
+
+/* ===== Page Heading ===== */
+.app-header {
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* ===== Content Area ===== */
+.app-content {
+  margin-top: 20px;
+}
+
+/* ===== Section Spacing ===== */
+.section {
+  margin-bottom: 40px;
+}
+
+/* ===== Background ===== */
+body {
+  margin: 0;
+  background: #f8fafc;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px 14px 40px;
+  }
+
+  .app-header h1 {
+    font-size: 26px;
+  }
+}

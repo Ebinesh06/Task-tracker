@@ -1,0 +1,22 @@
+<div class="task-form">
+  <h2>Add New Task</h2>
+
+  <!-- Task Title -->
+  <input
+    type="text"
+    placeholder="Task title"
+    [(ngModel)]="title"
+  />
+
+  <!-- Task Description -->
+  <textarea
+    rows="3"
+    placeholder="Task description"
+    [(ngModel)]="description">
+  </textarea>
+
+  <!-- Add Button -->
+  <button (click)="addTask()">
+    ➕ Add Task
+  </button>
+</div>

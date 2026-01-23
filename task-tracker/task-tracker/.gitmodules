@@ -1,0 +1,3 @@
+[submodule "food-delivery-app"]
+	path = food-delivery-app
+	url = https://github.com/Karthikr0815/Food-delivery-app.git

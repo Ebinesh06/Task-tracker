@@ -1,0 +1,84 @@
+<div class="task-list">
+
+  <!-- ===== STATS ===== -->
+  <div class="stats">
+    <div class="stat-card total">
+      <span>Total</span>
+      <strong>{{ totalCount }}</strong>
+    </div>
+
+    <div class="stat-card completed">
+      <span>Completed</span>
+      <strong>{{ completedCount }}</strong>
+    </div>
+
+    <div class="stat-card pending">
+      <span>Pending</span>
+      <strong>{{ pendingCount }}</strong>
+    </div>
+  </div>
+
+  <!-- ===== FILTERS ===== -->
+  <div class="filters">
+  <button
+    [class.active]="filter === 'all'"
+    (click)="setFilter('all')">
+    All
+  </button>
+
+  <button
+    [class.active]="filter === 'pending'"
+    (click)="setFilter('pending')">
+    Pending
+  </button>
+
+  <button
+    [class.active]="filter === 'completed'"
+    (click)="setFilter('completed')">
+    Completed
+  </button>
+
+  <!-- NEW CLEAR BUTTON -->
+  <button class="clear-btn" (click)="clearCompleted()">
+    🧹 Clear Completed
+  </button>
+</div>
+
+
+  <!-- ===== ADD TASK FORM ===== -->
+  <app-task-form (taskAdded)="onTaskAdded($event)"></app-task-form>
+
+  <!-- ===== EMPTY STATE ===== -->
+  <p class="empty" *ngIf="filteredTasks.length === 0">
+    No tasks to display
+  </p>
+
+  <!-- ===== TASK CARDS ===== -->
+  <div
+    class="task-card"
+    *ngFor="let task of filteredTasks"
+    [class.done]="task.completed">
+
+    <div class="task-info">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+    </div>
+
+    <div class="task-actions">
+      <button (click)="toggleTask(task)">
+        {{ task.completed ? '↩ Pending' : '✔ Complete' }}
+      </button>
+
+      <button (click)="viewDetails(task)">
+        👁 Details
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== TASK DETAILS (INLINE, NO ROUTER) ===== -->
+  <app-task-details
+    *ngIf="selectedTask"
+    [task]="selectedTask">
+  </app-task-details>
+
+</div>
